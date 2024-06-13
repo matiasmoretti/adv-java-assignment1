@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.studentmanager.controllers.MainController">
+   <children>
+      <TableView fx:id="table_students" layoutX="206.0" layoutY="14.0" onMouseClicked="#getSelected" prefHeight="200.0" prefWidth="357.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="40.0" text="ID" />
+          <TableColumn fx:id="col_name" prefWidth="124.0" text="Name" />
+            <TableColumn fx:id="col_email" prefWidth="130.0" text="eMail" />
+            <TableColumn fx:id="col_major" prefWidth="87.0" text="Major" />
+        </columns>
+      </TableView>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: gray;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="400.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="txt_id" layoutX="26.0" layoutY="36.0" prefHeight="25.0" prefWidth="78.0" promptText="ID" />
+            <TextField fx:id="txt_name" layoutX="26.0" layoutY="70.0" promptText="Name" />
+            <TextField fx:id="txt_email" layoutX="26.0" layoutY="103.0" promptText="eMail" />
+            <TextField fx:id="txt_major" layoutX="26.0" layoutY="138.0" promptText="Major" />
+            <Button layoutX="26.0" layoutY="229.0" mnemonicParsing="false" onAction="#Add_users" prefHeight="49.0" prefWidth="149.0" text="Add" />
+            <Button layoutX="26.0" layoutY="283.0" mnemonicParsing="false" onAction="#Edit" prefHeight="49.0" prefWidth="149.0" text="Update" />
+            <Button layoutX="26.0" layoutY="337.0" mnemonicParsing="false" onAction="#Delete" prefHeight="49.0" prefWidth="149.0" text="Delete" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
